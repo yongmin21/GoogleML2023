@@ -1,10 +1,9 @@
 # GoogleML2023
 2023 google machine learning bootcamp
+  
+  
 
-
-
-
-      
+ 
 ---
 ### 하고 싶은 것
 **NN Model 사용해보기**  
