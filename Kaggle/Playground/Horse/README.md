@@ -10,7 +10,7 @@ Final LeaderBoard Score : 464 / 1543
     
   이번 competition은 추가 데이터를 사용이 가능했다.  
   kaggle에서 제공한 train set과 추가 데이터를 합치면 data shape은 약 (1600, 30) 정도로 매우 작은 데이터라 할 수 있다.  
-  최종적으로 우리가 제출한 코드는 다음과 같은 방법들을 사용해 stacking, voting을 시도하여 제출하였다.  
+  최종적으로 우리가 제출한 코드는 다음과 같은 방법들을 사용해 stacking, majority voting을 시도하여 제출하였다.  
   
   1. JH - Label Encoder, KNN imputer, Standard Scaler, HistGB  
   2. SS - NN  
