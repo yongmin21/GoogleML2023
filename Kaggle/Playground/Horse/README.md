@@ -26,6 +26,13 @@ Final LeaderBoard Score : 464 / 1543
 
   그리고 Error Analysis를 잘 해야겠다.
 </details>
+---
+### 파일 설명
+input - 모델의 input으로 사용될 train, test, submission 파일들  
+notebook - EDA나 테스트를 위해 사용한 jupyter notebook 파일들  
+models - 학습된 모델 output pickle 파일들  
+src - config, helpers, pipeline과 같은 사용자 지정 함수가 들어있는 파일들  
+output - submission에 제출하기 위한 모델의 예측값 파일들  
 
 ---
 ### 버전별 기록들
