@@ -23,8 +23,10 @@ Final LeaderBoard Score : 464 / 1543
   1. Public Score보다 CV Score를 판단 지표로 삼아라.  
   2. 일관성을 갖고 도전하고 과적합을 조심하라. 합성 데이터는 잡음이 많고 과적합이 매우 쉽다.  
   3. 다양한 모델을 최종 제출물로 제출하여 shakeup의 위험을 방지합니다.  
-
-  그리고 Error Analysis를 잘 해야겠다.
+  
+  해당 내용을 통해 우리의 모델이 너무 복잡한 모델을 사용하였고(ensemble + NN + hgb Ensemble), 내 모델의 경우에는 복잡한 feature engineering 방식을 사용하였기 때문에 성적이 낮게 나왔다고 판단된다.  
+  train data가 작은 경우 feature engineering은 새로운 feature를 추가하거나 feature를 제거하는 정도로만 noise를 최대한 줄이는 방식으로 해야겠다.  
+  그리고 Error Analysis를 잘 해야겠다.  
 </details>
 
   
