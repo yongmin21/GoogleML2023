@@ -27,8 +27,8 @@ Final LeaderBoard Score : 464 / 1543
   그리고 Error Analysis를 잘 해야겠다.
 </details>
 
----
-
+  
+  
 ### 파일 설명  
 input - 모델의 input으로 사용될 train, test, submission 파일들  
 notebook - EDA나 테스트를 위해 사용한 jupyter notebook 파일들  
