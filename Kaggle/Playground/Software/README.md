@@ -1,1 +1,47 @@
-pass
+# Binary Classification with a Software Defects Dataset
+---
+Kaggle Playground  
+  
+Final LeaderBoard Score : 210 / 1704 (상위 20% 이내)
+
+<details>
+  <summery>실패 원인 분석</summery>
+
+    
+  이번 competition은 추가 데이터 사용이 가능했다.  
+  그러나 저번 대회와는 달리 추가 데이터의 분포가 kaggle에서 제공한 train set과 다르다는 의견이 있어 사용하지 않았다.
+  또한 이번 대회는 train set의 shape이 
+  
+  1. JH - Label Encoder, KNN imputer, Standard Scaler, HistGB  
+  2. SS - NN  
+  3. YM - Target Encoder, KNN imputer, (xgb, hgb, lgbm) ensemble
+     
+  높은 성적을 받은 코드를 확인해보니 별다른 feature engineering을 요하지 않았다.  
+  그리고 shakeup과 관련한 다른 유저의 comment를 확인해보니 데이터가 작은 경우 최대한 simple 모델을 사용하고,  
+  별다른 feature engineering을 가하지 않는 것이 overfit을 줄이는 방법이라 했다.  
+  추가로 그 분이 올린 내용은 다음과 같다.  
+  
+  1. Public Score보다 CV Score를 판단 지표로 삼아라.  
+  2. 일관성을 갖고 도전하고 과적합을 조심하라. 합성 데이터는 잡음이 많고 과적합이 매우 쉽다.  
+  3. 다양한 모델을 최종 제출물로 제출하여 shakeup의 위험을 방지합니다.  
+  
+  해당 내용을 통해 우리의 모델이 너무 복잡한 모델을 사용하였고(ensemble + NN + hgb Ensemble),  
+  내 모델의 경우에는 복잡한 feature engineering 방식을 사용하였기 때문에 성적이 낮게 나왔다고 판단된다.  
+  train data가 작은 경우 feature engineering은 새로운 feature를 추가하거나  
+  feature를 제거하는 정도로만 noise를 최대한 줄이는 방식으로 해야겠다.  
+  
+  그리고 Error Analysis를 잘 해야겠다.  
+</details>
+
+  
+  
+### 파일 설명  
+input - 모델의 input으로 사용될 train, test, submission 파일들  
+notebook - EDA나 테스트를 위해 사용한 jupyter notebook 파일들  
+models - 학습된 모델 output pickle 파일들  
+src - config, helpers, pipeline과 같은 사용자 지정 함수가 들어있는 파일들  
+output - submission에 제출하기 위한 모델의 예측값 파일들  
+
+---
+### 버전별 기록들
+추가 예정 ...
