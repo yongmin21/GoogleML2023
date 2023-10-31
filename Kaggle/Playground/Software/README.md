@@ -9,26 +9,27 @@ Final LeaderBoard Score : 210 / 1704 (상위 20% 이내)
 
     
   이번 competition은 추가 데이터 사용이 가능했다.  
-  그러나 저번 대회와는 달리 추가 데이터의 분포가 kaggle에서 제공한 train set과 다르다는 의견이 있어 사용하지 않았다.
-  또한 이번 대회는 train set의 shape이 
+  그러나 저번 대회와는 달리 추가 데이터의 분포가 kaggle에서 제공한 train set과 다르다는 의견이 있어 사용하지 않았다.  
+  또한 이번 대회는 train set의 shape이 (101763, 22) 으로 꽤 많은 정도에 속한 것 같다.  
+  그러나 이번 대회에서는 feature engineering을 진행할 수록 score가 내려가고, 다른 유저들 역시 model ensemble에만 집중하였다.  
+  따라서 overfitting에 유의하면서 model ensemble을 적절하게 구성하는 것에 목표를 두고 진행하였다.  
   
-  1. JH - Label Encoder, KNN imputer, Standard Scaler, HistGB  
-  2. SS - NN  
-  3. YM - Target Encoder, KNN imputer, (xgb, hgb, lgbm) ensemble
+  제출한 코드는 두 가지였다.  
+  Log Transform을 적용한 뒤, 
+  1. Kernel Approximation을 추가한 LR + Tree Based Models + Hill Climbing  
+  2. LGBM + XGB로만 구성된 앙상블 + Hill Climbing (다른 유저 코드)  
      
-  높은 성적을 받은 코드를 확인해보니 별다른 feature engineering을 요하지 않았다.  
-  그리고 shakeup과 관련한 다른 유저의 comment를 확인해보니 데이터가 작은 경우 최대한 simple 모델을 사용하고,  
-  별다른 feature engineering을 가하지 않는 것이 overfit을 줄이는 방법이라 했다.  
-  추가로 그 분이 올린 내용은 다음과 같다.  
+  높은 성적을 받은 코드를 확인해보니 사용한 모델은 다음과 같았다.  
+  Random Forest  
+  Extra Trees  
+  HistGradientBoosting  
+  LightGBM  
+  XGBoost  
+  CatBoost  
+  그리고 여기에 hill climbing이라는 기법을 적용해 앙상블 점수를 끌어올렸다.  
+  * hill climbing 이란 일종의 Greedy 알고리즘으로, 가장 점수가 높게 나타나는 모델별 앙상블 weight를 찾아주는 방법이다.  
+
   
-  1. Public Score보다 CV Score를 판단 지표로 삼아라.  
-  2. 일관성을 갖고 도전하고 과적합을 조심하라. 합성 데이터는 잡음이 많고 과적합이 매우 쉽다.  
-  3. 다양한 모델을 최종 제출물로 제출하여 shakeup의 위험을 방지합니다.  
-  
-  해당 내용을 통해 우리의 모델이 너무 복잡한 모델을 사용하였고(ensemble + NN + hgb Ensemble),  
-  내 모델의 경우에는 복잡한 feature engineering 방식을 사용하였기 때문에 성적이 낮게 나왔다고 판단된다.  
-  train data가 작은 경우 feature engineering은 새로운 feature를 추가하거나  
-  feature를 제거하는 정도로만 noise를 최대한 줄이는 방식으로 해야겠다.  
   
   그리고 Error Analysis를 잘 해야겠다.  
 </details>
