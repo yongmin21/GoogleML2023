@@ -11,7 +11,7 @@ Final LeaderBoard Score : 210 / 1704 (상위 20% 이내)
   이번 competition은 추가 데이터 사용이 가능했다.  
   그러나 저번 대회와는 달리 추가 데이터의 분포가 kaggle에서 제공한 train set과 다르다는 의견이 있어 사용하지 않았다.  
   또한 이번 대회는 train set의 shape이 (101763, 22) 으로 꽤 많은 정도에 속한 것 같다.  
-  그러나 이번 대회에서는 feature engineering을 진행할 수록 score가 내려가고, 다른 유저들 역시 model ensemble에만 집중하였다.  
+  그러나 이번 대회에서는 feature engineering을 진행할 수록 score가 내려갔었고, 다른 유저들 역시 같은 현상이 있었기에 model ensemble에만 집중하였다.  
   따라서 overfitting에 유의하면서 model ensemble을 적절하게 구성하는 것에 목표를 두고 진행하였다.  
   
   제출한 코드는 두 가지였다.  
