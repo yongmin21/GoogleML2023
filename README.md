@@ -12,4 +12,4 @@
 
 ### 내가 한 것들
 **DeepLearning Specialization 완강** - 복습 필히 요망..!  
-**Kaggle Competition** - 진행중  
+**Kaggle Competition** - 완료  
