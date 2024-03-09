@@ -1,3 +1,10 @@
+# Competition  
+* Optiver Trading at Close 대회 참여
+
+# Playground
+* 데이터 분석 연습 대회 참여
+
+  
 ### Reference 정리
 
 **:bee: WandB**
